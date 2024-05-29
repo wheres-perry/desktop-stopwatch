@@ -31,6 +31,9 @@ MainWindow::MainWindow(QWidget *parent)
     // Install event filters for buttons
     ui->startButton->installEventFilter(this);
     ui->resetButton->installEventFilter(this);
+
+    appDataPath = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation);
+    filePath = appDataPath + "/log.json";
 }
 
 // Destructor: Cleans up allocated resources
@@ -72,18 +75,22 @@ void MainWindow::resetTimer() {
         bool ok;
         QString label = QInputDialog::getText(this, tr("Label Your Time Stamp"), tr("Label:"), QLineEdit::Normal, "", &ok);
 
-        if (label.isEmpty()) {
-            label = " ";
-        }
+        if (ok) {
+            while (label.isEmpty()) {
+                QMessageBox::warning(this, "Error", "Label cannot be empty. Please enter a valid label.");
+                label = QInputDialog::getText(this, tr("Label Your Time Stamp"), tr("Label:"), QLineEdit::Normal, "", &ok);
+                if (!ok) {
+                    // Revert to paused state
+                    ui->startButton->setText("Start");
+                    return;
+                }
+            }
 
-        if (ok && !label.isEmpty()) {
-            // Handle log file
-            QFile logFile("log.json");
+            QFile logFile(filePath);
+
             QJsonDocument logDoc;
             QJsonArray logArray;
-
-            // Load existing log entries
-            if (logFile.exists() && logFile.open(QIODevice::ReadOnly)) {
+            if (logFile.open(QIODevice::ReadOnly)) {
                 logDoc = QJsonDocument::fromJson(logFile.readAll());
                 if (logDoc.isArray()) {
                     logArray = logDoc.array();
@@ -106,6 +113,10 @@ void MainWindow::resetTimer() {
                 logFile.write(logDoc.toJson(QJsonDocument::Indented));
                 logFile.close();
             }
+        } else {
+            // Revert to paused state
+            ui->startButton->setText("Start");
+            return;
         }
 
         // Reset the timer and update UI

@@ -15,6 +15,8 @@
 #include <QJsonObject>
 #include <QJsonArray>
 #include <QJsonValue>
+#include <QStandardPaths>
+#include <QDir>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -46,6 +48,8 @@ private:
     QPoint dragStartPosition;    // Position to handle window dragging
     bool timerEmpty = true;      // Flag to check if the timer is empty
     QJsonArray timestampsArray;  // Array to store timestamp data
+    QString appDataPath;
+    QString filePath;
 };
 
 #endif // MAINWINDOW_H
