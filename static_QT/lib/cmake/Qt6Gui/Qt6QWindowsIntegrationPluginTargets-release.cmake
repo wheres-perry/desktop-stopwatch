@@ -9,21 +9,21 @@ set(CMAKE_IMPORT_FILE_VERSION 1)
 set_property(TARGET Qt6::QWindowsIntegrationPlugin APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(Qt6::QWindowsIntegrationPlugin PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/./plugins/platforms/libqwindows.a"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/plugins/platforms/libqwindows.a"
   )
 
 list(APPEND _cmake_import_check_targets Qt6::QWindowsIntegrationPlugin )
-list(APPEND _cmake_import_check_files_for_Qt6::QWindowsIntegrationPlugin "${_IMPORT_PREFIX}/./plugins/platforms/libqwindows.a" )
+list(APPEND _cmake_import_check_files_for_Qt6::QWindowsIntegrationPlugin "${_IMPORT_PREFIX}/plugins/platforms/libqwindows.a" )
 
 # Import target "Qt6::QWindowsIntegrationPlugin_init" for configuration "Release"
 set_property(TARGET Qt6::QWindowsIntegrationPlugin_init APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(Qt6::QWindowsIntegrationPlugin_init PROPERTIES
   IMPORTED_COMMON_LANGUAGE_RUNTIME_RELEASE ""
-  IMPORTED_OBJECTS_RELEASE "${_IMPORT_PREFIX}/./plugins/platforms/objects-Release/QWindowsIntegrationPlugin_init/QWindowsIntegrationPlugin_init.cpp.obj"
+  IMPORTED_OBJECTS_RELEASE "${_IMPORT_PREFIX}/plugins/platforms/objects-Release/QWindowsIntegrationPlugin_init/QWindowsIntegrationPlugin_init.cpp.obj"
   )
 
 list(APPEND _cmake_import_check_targets Qt6::QWindowsIntegrationPlugin_init )
-list(APPEND _cmake_import_check_files_for_Qt6::QWindowsIntegrationPlugin_init "${_IMPORT_PREFIX}/./plugins/platforms/objects-Release/QWindowsIntegrationPlugin_init/QWindowsIntegrationPlugin_init.cpp.obj" )
+list(APPEND _cmake_import_check_files_for_Qt6::QWindowsIntegrationPlugin_init "${_IMPORT_PREFIX}/plugins/platforms/objects-Release/QWindowsIntegrationPlugin_init/QWindowsIntegrationPlugin_init.cpp.obj" )
 
 # Import target "Qt6::QWindowsIntegrationPlugin_resources_1" for configuration "Release"
 set_property(TARGET Qt6::QWindowsIntegrationPlugin_resources_1 APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)

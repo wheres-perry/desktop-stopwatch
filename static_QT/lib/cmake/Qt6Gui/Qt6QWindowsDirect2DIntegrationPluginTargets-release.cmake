@@ -9,21 +9,21 @@ set(CMAKE_IMPORT_FILE_VERSION 1)
 set_property(TARGET Qt6::QWindowsDirect2DIntegrationPlugin APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(Qt6::QWindowsDirect2DIntegrationPlugin PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/./plugins/platforms/libqdirect2d.a"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/plugins/platforms/libqdirect2d.a"
   )
 
 list(APPEND _cmake_import_check_targets Qt6::QWindowsDirect2DIntegrationPlugin )
-list(APPEND _cmake_import_check_files_for_Qt6::QWindowsDirect2DIntegrationPlugin "${_IMPORT_PREFIX}/./plugins/platforms/libqdirect2d.a" )
+list(APPEND _cmake_import_check_files_for_Qt6::QWindowsDirect2DIntegrationPlugin "${_IMPORT_PREFIX}/plugins/platforms/libqdirect2d.a" )
 
 # Import target "Qt6::QWindowsDirect2DIntegrationPlugin_init" for configuration "Release"
 set_property(TARGET Qt6::QWindowsDirect2DIntegrationPlugin_init APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(Qt6::QWindowsDirect2DIntegrationPlugin_init PROPERTIES
   IMPORTED_COMMON_LANGUAGE_RUNTIME_RELEASE ""
-  IMPORTED_OBJECTS_RELEASE "${_IMPORT_PREFIX}/./plugins/platforms/objects-Release/QWindowsDirect2DIntegrationPlugin_init/QWindowsDirect2DIntegrationPlugin_init.cpp.obj"
+  IMPORTED_OBJECTS_RELEASE "${_IMPORT_PREFIX}/plugins/platforms/objects-Release/QWindowsDirect2DIntegrationPlugin_init/QWindowsDirect2DIntegrationPlugin_init.cpp.obj"
   )
 
 list(APPEND _cmake_import_check_targets Qt6::QWindowsDirect2DIntegrationPlugin_init )
-list(APPEND _cmake_import_check_files_for_Qt6::QWindowsDirect2DIntegrationPlugin_init "${_IMPORT_PREFIX}/./plugins/platforms/objects-Release/QWindowsDirect2DIntegrationPlugin_init/QWindowsDirect2DIntegrationPlugin_init.cpp.obj" )
+list(APPEND _cmake_import_check_files_for_Qt6::QWindowsDirect2DIntegrationPlugin_init "${_IMPORT_PREFIX}/plugins/platforms/objects-Release/QWindowsDirect2DIntegrationPlugin_init/QWindowsDirect2DIntegrationPlugin_init.cpp.obj" )
 
 # Import target "Qt6::QWindowsDirect2DIntegrationPlugin_resources_1" for configuration "Release"
 set_property(TARGET Qt6::QWindowsDirect2DIntegrationPlugin_resources_1 APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)

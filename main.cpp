@@ -1,6 +1,9 @@
 #include "mainwindow.h"
 #include <QApplication>
 
+
+const QString VERSION = "0.1";
+
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
@@ -10,6 +13,7 @@ int main(int argc, char *argv[])
     app.setWindowIcon(appIcon);
 
     // Create and show main window
+    mainWindow.setWindowTitle("Stopwatch " + VERSION);
     MainWindow mainWindow;
     mainWindow.show();
 
