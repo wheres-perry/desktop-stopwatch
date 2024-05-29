@@ -13,8 +13,8 @@ int main(int argc, char *argv[])
     app.setWindowIcon(appIcon);
 
     // Create and show main window
-    mainWindow.setWindowTitle("Stopwatch " + VERSION);
     MainWindow mainWindow;
+    mainWindow.setWindowTitle("Stopwatch " + VERSION);
     mainWindow.show();
 
     // Execute the application
