@@ -1,0 +1,5 @@
+list(APPEND known_libs ZSTD)
+set(QMAKE_LIBS_ZSTD_RELEASE "C:/Program Files/mysys/ucrt64/lib/libzstd.dll.a")
+set(QMAKE_LIBDIR_ZSTD_RELEASE "")
+set(QMAKE_INCDIR_ZSTD_RELEASE "")
+set(QMAKE_DEFINES_ZSTD_RELEASE "")
